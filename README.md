@@ -44,12 +44,22 @@ The data is stored in the following csv files-
 
 # Functions
 1.'createAccount(email,password)' : This function creates a new email account by adding the email and password to the 'EmailDetails.csv' file. It first checks if the email already exists in the file. If it exists already, the function returns without creating a new account and the user is given a warning message. Otherwise, it appends the email and password to the file, and successfully creates a new account.
+
 2.'addToFiles(email)' : This function appends the given email to the 'Inbox.csv' and 'Outbox.csv' files. It reads the existing rows from each file, appends the email to the existing rows, and then writes the updated rows back to the files.
+
 3.'addColName()' : This function adds column names to the 'EmailDetails.csv' file if they are not already present. It checks if the first row of the file contains the column names 'Email' and 'Password'. If not, it writes the column names as the first row of the file.
+
 4.'login(email,password)' : This function peforms the login process by checking if the given email and password match an existing account in the 'EmailDetails.csv' file. It reads each row in the file and compares the email and password with the provided credentials. If a match is found, the function returns 'True', and successfully logs in. Otherwise, it returns 'False'. If login is successful, the user is shown a new menu including options to send emails, and opening inbox and outbox of the user.
+
 5.'check_email_existence(email)' : This function checks if the given email exists in 'Inbox.csv' file and 'Outbox.csv' file. If it exists in both, it returns 'True'. Otherwise, it returns 'False'.
+
 6.'sendEmail(user,receiver,subject,msg)' : This function sends an email from the user to the receiver. It first checks if the receiver's email exists in 'Inbox.csv' and 'Outbox.csv' files using 'check_email_existence(email)' function. If the email does not exist, the user is given a warning error. Otherwise, it appends the email information to the user's row in the 'Inbox.csv' file, and the receiver's row in the 'Outbox.csv' file.
+
 7.'readInbox(email)' : This function reads and displays the emails received by the given email address. It reads the 'Inbox.csv' file and checks each row for a matching email address. If a match is found, it prints all the email details. If no emails are found, it prints a message indicating that no emails have been received yet.
+
 8.'readOutbox(email)' : This function reads and displays the emails sent by the given email address. It reads the 'Outbox.csv' file and checks each row for a matching email address. If a match is found, it prints all the email details. If no emails are found, it prints a message indicating that no emails have been sent yet.
+
 9.'logout()' : This function logs the user out of their account, displays a message indicating the successful logout, and brings the user back to the main menu.
+
 10.'main()' : This is the main function that drives the mailing system. It creates/opens the required csv files. It calls the addColName() function as well. It presents a menu to the user and performs the corresponding actions based on the user's choices.
+
