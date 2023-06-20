@@ -29,9 +29,9 @@ After the user is logged in, they are shown the following menu-
 1. Send Email
 2. Open Outbox
 3. Open Inbox
-0. Logout
-The user will be asked to enter their choice, by typing in 1,2,3, or 0.
-If the user chooses 0 to logout, then the user will be logged out of their account, and they will be shown the main menu.
+4. Logout
+The user will be asked to enter their choice, by typing in 1,2,3, or 4.
+If the user chooses 4 to logout, then the user will be logged out of their account, and they will be shown the main menu.
 If the user chooses 1 to send an email, they will be asked to enter the receiver's email, subject of the email and message of the email. If the receiver's email entered by the user is not valid, then the user will be shown a warning message. If the receiver's email is valid, then the email will be sent. The email will be added to the user's outbox, and the receiver's inbox.
 If the user chooses 2 to open their outbox, all the emails in their outbox is shown.
 If the user chooses 3 to open their inbox, all the emails in their inbox is shown.
